@@ -19,9 +19,7 @@ app.use(cors({
     credentials: true
 }))
 
-app.get("/", (req, res) => {
-    res.send("Hello World")
-})
+
 app.use("/api/auth", authRoutes)
 app.use("/api/messages", messageRoutes);
 if (process.env.NODE_ENV === "production"){
